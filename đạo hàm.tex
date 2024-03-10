@@ -1,0 +1,144 @@
+\documentclass{article}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage[utf8]{vietnam}
+\usepackage[top=0.5cm,left=1.5cm, right=1.5cm, bot=1cm, a4paper]{geometry}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+
+\title{\huge \textbf{Chương: Đạo Hàm}}
+\author{Nguyễn Thái Đăng Khoa}
+\date{2024}
+
+\begin{document}
+	\maketitle
+	\begin{Large}
+	\section{Định nghĩa về đạo hàm}
+	\subsection{Đạo hàm tại một điểm}
+		\begin{itemize}
+			\item [-] Cho hàm số $y=f(x)$ liên tục trên $(a,b)$ (hoặc $[a,b]$, $(a,+\infty)$, $(-\infty,a),...$). Cố định $x_{0} \in (a,b)$. Nếu tồn tại giới hạn hữu hạn
+		\end{itemize}
+		\[\lim_{x\to x_{0}}\frac{f(x)-f(x_{0})}{x-x_{0}}\in \mathbb{R}, x \not = x_{0}\]
+		thì ta nói $f(x)$ có đạo hàm cấp 1 tại $x_{0}$.
+		\begin{itemize}
+			\item [*]\textbf{\underline{Kí hiệu:}}
+		\end{itemize}
+		\[f'(x_{0})=\lim_{x\to x_{0}}\frac{f(x)-f(x_{0})}{x-x_{0}}\]\\
+		\underline{\textbf{Ví dụ:}} Tính đạo hàm của hàm số $f(x)=x^2+1$ tại điểm $x_{0}=2$\\
+		Giải:\\
+		$f'(2)=\displaystyle\lim_{x\to 2}\frac{f(x)-f(2)}{x-2}=\displaystyle\lim_{x\to 2}\frac{x^2+1-(2^2+1)}{x-2}=\displaystyle\lim_{x\to 2}\frac{x^2-4}{x-2}=\displaystyle\lim_{x\to 2}(x+2)=4$
+		\subsection{Đạo hàm trên khoảng}
+		\begin{itemize}
+			\item [-] Hàm số $y=f(x)$ được gọi là có đạo hàm trên $(a,b)$ nếu nó có đạo hàm tại mọi điểm $x_{0}$ thuộc khoảng đó.
+		\end{itemize}
+		\begin{itemize}
+			\item [*]\textbf{\underline{Kí hiệu:}} $y'=f'(x)$
+		\end{itemize}
+		\section{Định lý}
+		\begin{itemize}
+			\item [-] Cho $u=f(x), v=g(x)$ có đạo hàm trên $(a,b)$. Khi đó:
+			\begin{enumerate}
+				\item [+]$(u\pm v)'=u'\pm v'$.
+				\item [+]$(uv)'=u'v+v'u$.
+				\item [+] Nếu $v\not =0$ thì $(\frac{u}{v})'=\frac{u'v-v'u}{v^2}$.
+			\end{enumerate}
+			\item[*]\textbf{\underline{Lưu ý:}} 
+			\begin{itemize}
+				\item[+] $(cv)'=cv'$ với c là hằng số.
+				\item[+] $(\frac{1}{v})'=\frac{-1}{v^2}$ với $v\not =0$.
+			\end{itemize}
+		\end{itemize}
+		\textbf{\underline{Ví dụ:}} Tính đạo hàm của các hàm số sau:
+		\begin{itemize}
+			\item [a/] $y=2x^2+3x+5$
+			\item [b/] $y=\frac{x+2}{x+5}$ liên tục trên $\mathbb{R}\setminus\{-5\}$
+		\end{itemize}
+		Giải:
+		
+		\vspace{3mm}
+		
+		a/ $y'=(2x^2)'+(3x)'+(5)'=4x+3+0=4x+3$.
+		
+		\vspace{3mm}
+		
+		b/ $y'=\frac{(x+2)'(x+5)-(x+5)'(x+2)}{(x+5)^2}=\frac{(x+5)-(x+2)}{(x+5)^2}=\frac{3}{(x+5)^2}$.
+		\section{Đạo hàm hàm hợp}
+		\begin{itemize}
+			\item [-]Cho hàm số $f(x), g(x)$ có đạo hàm trên $(a,b)$. Đặt $h(x)=f(g(x))$. Khi đó:
+		\end{itemize}
+		$$h'(x)=f'(g(x)).g'(x)$$
+		\textbf{\underline{Ví dụ:}} Tính đạo hàm của $y=\sqrt{x^2+2}$.\\
+		Giải:\\
+		Đặt $h(x)=\sqrt{x^2+2}$, $f(x)=\sqrt{x}$, $g(x)=\sqrt{x^2+2}$.
+		
+		\vspace{3mm}
+		
+		$f'(x)=\frac{1}{2\sqrt{x}}$, $g'(x)=2x$.
+		
+		\vspace{3mm}
+		
+		$h'(x)=f'(g(x)).g'(x)=\frac{2x}{2\sqrt{x^2+2}}$.
+		\section{Bảng công thức đạo hàm cần nhớ}
+		\begin{itemize}
+			\item \textbf{Các hàm dưới đây có đạo hàm (khả vi) trên đoạn xác định của nó}
+		\end{itemize}
+		\begin{center}
+			\begin{tabular}{|c|c|}
+				\hline
+				\textit{Đạo hàm hàm số f(x) với x là biến số}&\textit{Đạo hàm hàm số f(u) với u là một hàm số}\\
+				\hline
+				$(cx)'=c$, c là hằng số&$(cu)'=cu'$\\
+				\hline
+				$x^n=nx^{n-1}$&$u^n=n.u^{n-1}.u'$\\
+				\hline
+				$(\frac{1}{x})'=-\frac{1}{x^2}$&$(\frac{1}{u})'=-\frac{u'}{u^2}$\\
+				\hline
+				$(\sqrt{x})'=-\frac{1}{2\sqrt{x}}$&$(\sqrt{u})'=-\frac{u'}{2\sqrt{u}}$\\
+				\hline
+				$(sin(x))'=cos(x)$&$(sin(u))'=u'.cos(u)$\\
+				\hline
+				$(cos(x))'=-sin(x)$&$(cos(u))'=-u'.sin(u)$\\
+				\hline
+				$(tan(x))'=1+\tan^2(x)=\frac{1}{\cos^2(x)}$&$(tan(u))'=(1+\tan^2(u)).u'=\frac{u'}{\cos^2(u)}$\\
+				\hline
+				$(\cot(x))'=-(1+\cot^2(x))=-\frac{1}{\sin^2(x)}$&$(\cot(u))'=-(1+\cot^2(u)).u'=-\frac{u'}{sin^2(x)}$\\
+				\hline
+				$(e^x)'=e^x$&$(e^u)'=u'.e^u$\\
+				\hline
+				$(a^x)'=a^x.\ln(a)$&$(a^u)'=a^u.\ln(a).u'$\\   
+				\hline
+				$(\ln(x))'=\frac{1}{x}$&$(ln(u))'=\frac{u'}{u}$\\
+				\hline
+				$(\log_{a}(x))'=\frac{1}{x.\ln(a)}$&$(\log_{a}(u))'=\frac{u'}{u'.\ln(a)}$\\
+				\hline
+			\end{tabular}
+		\end{center}
+		\section{Một số ý nghĩa của đạo hàm}
+		\subsection{Tiếp tuyến của đồ thị hàm số}
+		\textbf{\underline{Ví dụ:}} Cho hàm số $f(x)=2x^3+5x^2+6x$ có đồ thị như hình dưới. Cho điểm $A(-1,-2)$ thuộc đồ thị, tìm đường tiếp tuyến của đồ thị tại điểm A.\\
+\begin{center}
+	\includegraphics[scale=0.6]{"đồ thị"}
+\end{center}
+		\begin{itemize}
+			\item \textbf{Phương pháp:} Điểm $A(x_0,y_0), y_0=f(x_0)$, tìm $f'(x_0)$. Lúc này $f'(x_0)$ là hệ số góc của đường tiếp tuyến. Phương trình đường tiếp tuyến có dạng: $$y=f'(x_0)(x-x_0)+y_0$$
+		\end{itemize}
+		\subsection{Cơ học vật lý}
+		\subsubsection{Đạo hàm cấp 2}
+		\begin{itemize}
+			\item [-]Cho $y=f(x)$ có đạo hàm cấp 1 trên từng điểm $x\in(a,b)$. Nếu $f'(x)$ tiếp tục có đạo hàm tại $x$ thì ta nói $f(x)$ có đạo hàm cấp 2 tại $x$.
+			\item [*] \textbf{\underline{Kí hiệu:}} $y''$ hoặc $f''(x)$.
+		\end{itemize}
+		\subsubsection{Ý nghĩa cơ học:}
+		\begin{itemize}
+			\item [-] Cho chuyển động có phương trình là $s(t)$, t là đơn vị thời gian tương ứng. Khi đó: $$s'(t)=v(t).$$ $$s''(t)=v'(t)=a(t).$$ Với v(t) và a(t) là vận tốc và gia tốc tức thời tại thời điểm t.
+		\end{itemize}
+		\textbf{\underline{Ví dụ:}} Cho một chất điểm dao động điều hòa có phương trình s=$\cos(\omega t+\varphi)$.
+		\begin{itemize}
+			\item [->]Vận tốc của chất điểm có phương trình là $v=-\omega\sin(\omega t+\varphi)$.
+			\item [->]Gia tốc của chất điểm có phương trình là $a=-\omega^2\cos(\omega t+\varphi)$.
+		\end{itemize}
+	\end{Large}
+\end{document}
